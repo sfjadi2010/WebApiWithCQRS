@@ -6,7 +6,7 @@ namespace WebApiWithCQRS.Endpoints;
 
 public class BooksModule : ICarterModule
 {
-    public async void AddRoutes(IEndpointRouteBuilder app)
+    public void AddRoutes(IEndpointRouteBuilder app)
     {
         app.MapGet("/books/{id:guid}", async (Guid id, ISender mediatr) =>
         {
